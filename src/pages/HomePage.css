@@ -1,0 +1,27 @@
+.homepage {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  z-index: 1;
+  box-shadow: 0 0 8px 8px black inset;
+}
+
+.homepage h1 {
+  position: relative;
+  color: white;
+  z-index: 2; /* Makes sure the text is above the overlay */
+  text-align: center;
+  padding-top: 40vh; /* Centers the text vertically */
+}
