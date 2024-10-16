@@ -17,11 +17,15 @@ export default function HomePage() {
 
       <button className="BookApptButton">Book Appointment</button>
 
-      <h1>
-        “More Than Just a Haircut – Where Style and Craftsmanship Come Together”
-      </h1>
+      <div className="text-center">
+        <h1 className="custom-heading">Look Good Feel Good Be Great</h1>
+
+        <p className="mt-4 text-lg text-gray-600">
+          More than just a Haircut – Crafting Strong First Impressions with
+          Style and Precision
+        </p>
+      </div>
       <p>
-        {" "}
         Our goal is to ensure you leave the chair looking and feeling your best.
         We are convinced that a great haircut holds tremendous power—it goes
         beyond mere grooming; it boosts your confidence and reflects your unique
