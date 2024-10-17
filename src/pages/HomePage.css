@@ -1,15 +1,13 @@
 .homepage {
   padding-top: 4rem;
-  margin-top: 4.2rem;
+  margin-top: 4.05rem;
   background-image: url("../images/background.jpg");
   background-size: cover;
   background-position: center;
-
   min-height: 100vh;
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
@@ -25,30 +23,120 @@
   z-index: 1;
   box-shadow: 0 0 8px 8px black inset;
 }
-
 .homepage h1 {
   color: white;
   z-index: 2; /* Makes sure the text is above the overlay */
   margin-bottom: 20px;
 }
+
 .custom-heading {
+  font-family: "Cormorant Unicase", "Roboto", sans-serif;
+  margin: 0 auto;
   z-index: 2;
   color: white;
   position: relative;
-  font-size: 2.25rem; /* Equivalent to text-4xl in Tailwind */
+  font-size: 3rem; /* Equivalent to text-4xl in Tailwind */
   font-weight: 700; /* Equivalent to font-bold */
   letter-spacing: -0.015em; /* Approximation for tight tracking */
-  text-align: center; /* Approximate balancing */
+  text-align: left;
 }
 
 .BookApptButton {
   background-color: white;
   color: black;
-  padding: 10px 20px;
+  margin-top: 15px;
+  padding: 15px 20px;
   border-radius: 5px;
   z-index: 2;
 }
 
 .BookApptButton:hover {
   cursor: pointer;
+}
+.ParaHeroSection {
+  font-family: "Cormorant Unicase", "Roboto", sans-serif;
+  font-size: 1.5rem;
+  z-index: 1;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.right-main-section {
+  flex: 1; /* Allow this section to grow */
+  margin: 0 20px 0 20px; /* Space between left and right sections */
+  padding: 0 20px 0 20px;
+  z-index: 1;
+}
+
+.left-main-section {
+  flex: 1; /* Allow this section to grow */
+  margin: 0 20px 0 20px; /* Space between left and right sections */
+  padding: 0 20px 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .homepage {
+    padding-top: 4rem;
+    margin-top: 4.2rem;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homepage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85); /* Dark overlay */
+    z-index: 1;
+    box-shadow: 0 0 8px 8px black inset;
+  }
+
+  .homepage h1 {
+    color: white;
+    z-index: 2; /* Makes sure the text is above the overlay */
+    margin-bottom: 20px;
+  }
+  .custom-heading {
+    z-index: 2;
+    color: white;
+    position: relative;
+    font-size: 1.8rem; /* Equivalent to text-4xl in Tailwind */
+    font-weight: 700; /* Equivalent to font-bold */
+    letter-spacing: -0.015em; /* Approximation for tight tracking */
+    text-align: left;
+  }
+
+  .BookApptButton {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 2;
+  }
+
+  .BookApptButton:hover {
+    cursor: pointer;
+  }
+  .right-main-section {
+    flex: 1; /* Allow this section to grow */
+    margin: 0 20px 0 20px; /* Space between left and right sections */
+    padding: 0 20px 0 20px;
+    z-index: 1;
+    font-size: 1rem;
+  }
+
+  .left-main-section {
+    flex: 1; /* Allow this section to grow */
+    margin: 0 20px 0 20px; /* Space between left and right sections */
+    padding: 0 20px 0 20px;
+  }
 }

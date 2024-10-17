@@ -6,7 +6,7 @@ export default function HomePage() {
     <div className="homepage">
       <Helmet>
         <title>
-          Best barbershop in Allen, Texas. | Haircuts and Beard Grooming in
+          Best barbershop in Allen, Texas. | Men haircuts and Beard Grooming in
           North Dallas.
         </title>
         <meta
@@ -15,22 +15,24 @@ export default function HomePage() {
         />
       </Helmet>
 
-      <button className="BookApptButton">Book Appointment</button>
-
-      <div className="text-center">
-        <h1 className="custom-heading">Look Good Feel Good Be Great</h1>
-
-        <p className="mt-4 text-lg text-gray-600">
-          More than just a Haircut – Crafting Strong First Impressions with
-          Style and Precision
-        </p>
+      <div className="left-main-section">
+        <h1 className="custom-heading">
+          Look Good, <br />
+          Feel Good, <br />
+          Be Great.
+        </h1>
       </div>
-      <p>
-        Our goal is to ensure you leave the chair looking and feeling your best.
-        We are convinced that a great haircut holds tremendous power—it goes
-        beyond mere grooming; it boosts your confidence and reflects your unique
-        style.
-      </p>
+
+      <div className="right-main-section">
+        <p className="ParaHeroSection">
+          More than just a Haircut <br />– Crafting Strong First Impressions
+          <br />
+          with Style and Precision
+          <br />
+        </p>
+
+        <button className="BookApptButton">Book Appointment</button>
+      </div>
     </div>
   );
 }
