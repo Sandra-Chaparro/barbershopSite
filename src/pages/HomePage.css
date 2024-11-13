@@ -1,13 +1,13 @@
 .homepage {
-  padding-top: 4rem;
-  margin-top: 4.05rem;
   background-image: url("../images/background.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 60px;
   min-height: 100vh;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -23,18 +23,18 @@
   z-index: 1;
   box-shadow: 0 0 8px 8px black inset;
 }
-.homepage h1 {
+
+.homepage h1,
+.homepage h2,
+.homepage h3 {
+  position: relative;
   color: white;
   z-index: 2; /* Makes sure the text is above the overlay */
-  margin-bottom: 20px;
 }
 
 .custom-heading {
-  font-family: "Cormorant Unicase", "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0 auto;
-  z-index: 2;
-  color: white;
-  position: relative;
   font-size: 3rem; /* Equivalent to text-4xl in Tailwind */
   font-weight: 700; /* Equivalent to font-bold */
   letter-spacing: -0.015em; /* Approximation for tight tracking */
@@ -44,23 +44,72 @@
 .BookApptButton {
   background-color: white;
   color: black;
-  margin-top: 15px;
-  padding: 15px 20px;
+  padding: 25px 30px;
   border-radius: 5px;
   z-index: 2;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .BookApptButton:hover {
   cursor: pointer;
 }
+
+.HeroSection {
+  position: relative;
+  z-index: 2;
+  margin-top: 18%;
+}
+
 .ParaHeroSection {
   font-family: "Cormorant Unicase", "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   z-index: 1;
-  color: white;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 80px;
 }
+
+.servicesContainer {
+  background-color: white;
+  z-index: 1;
+  padding: 10px 20px;
+  margin-top: 140px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 80px;
+}
+
+.serviceItem {
+  background-color: black;
+  padding: 10px;
+}
+.reviewsContainer {
+  margin-bottom: 10px;
+  padding: 20px 20px;
+  background-color: #eeeeee;
+}
+
+/* Location Section */
+.Location-MapContainer {
+  padding: 40px 20px;
+  background-color: #dddddd;
+}
+
+.servicesTitle {
+  color: black !important;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.titles {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .right-main-section {
   flex: 1; /* Allow this section to grow */
   margin: 0 20px 0 20px; /* Space between left and right sections */
@@ -76,55 +125,33 @@
   justify-content: center;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .homepage {
-    padding-top: 4rem;
-    margin-top: 4.2rem;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    background-size: 160%;
+    background-position: center top;
+    padding: 50px 0;
+    margin-top: 70px;
   }
 
-  .homepage::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.85); /* Dark overlay */
-    z-index: 1;
-    box-shadow: 0 0 8px 8px black inset;
-  }
-
-  .homepage h1 {
-    color: white;
-    z-index: 2; /* Makes sure the text is above the overlay */
-    margin-bottom: 20px;
-  }
   .custom-heading {
-    z-index: 2;
-    color: white;
-    position: relative;
     font-size: 1.8rem; /* Equivalent to text-4xl in Tailwind */
-    font-weight: 700; /* Equivalent to font-bold */
-    letter-spacing: -0.015em; /* Approximation for tight tracking */
-    text-align: left;
   }
 
   .BookApptButton {
-    background-color: white;
-    color: black;
     padding: 10px 20px;
-    border-radius: 5px;
-    z-index: 2;
   }
 
   .BookApptButton:hover {
     cursor: pointer;
+  }
+  .ParaHeroSection {
+    font-size: 1rem;
+    margin-top: 35px;
+  }
+  .servicesGrid {
+    grid-template-columns: 1fr; /* Switch to a single column */
+    gap: 10px; /* Adjust the gap as needed */
   }
   .right-main-section {
     flex: 1; /* Allow this section to grow */

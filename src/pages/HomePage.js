@@ -15,23 +15,50 @@ export default function HomePage() {
         />
       </Helmet>
 
-      <div className="left-main-section">
-        <h1 className="custom-heading">
-          Look Good, <br />
-          Feel Good, <br />
-          Be Great.
-        </h1>
+      <div className="HeroSection">
+        <button
+          className="BookApptButton"
+          onClick={() =>
+            (window.location.href =
+              "https://book.squareup.com/appointments/dfgljw70mpc8dx/location/9PV6DKFGH39H7/services")
+          }
+        >
+          Book Appointment
+        </button>
+        <h1 className="ParaHeroSection">Barbershop in Allen, TX</h1>
       </div>
 
-      <div className="right-main-section">
-        <p className="ParaHeroSection">
-          More than just a Haircut <br />– Crafting Strong First Impressions
-          <br />
-          with Style and Precision
-          <br />
-        </p>
+      <div className="servicesContainer">
+        <h2 className="servicesTitle">Men Grooming Services</h2>
+        <div className="servicesGrid">
+          <div className="serviceItem">
+            <h3>Haircuts</h3>
+          </div>
+          <div className="serviceItem">
+            <h3>Beard</h3>
+            <img></img>
+          </div>
+          <div className="serviceItem">
+            <h3>Head Shave</h3>
+          </div>
+          <div className="serviceItem">
+            <h3>Beard Shave</h3>
+          </div>
+          <div className="serviceItem">
+            <h3>Designs</h3>
+          </div>
+          <div className="serviceItem">
+            <h3>Kids Haircut </h3>
+          </div>
+        </div>
+      </div>
 
-        <button className="BookApptButton">Book Appointment</button>
+      <div className="reviewsContainer">
+        <h2 className="titles">Reviews</h2>
+      </div>
+
+      <div className="Location-MapContainer">
+        <h2 className="titles">Barbershop in Allen, Texas</h2>
       </div>
     </div>
   );
