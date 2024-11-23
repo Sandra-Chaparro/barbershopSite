@@ -9,8 +9,8 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
-import Padour from "../images/Padour.png";
-
+import Padour from "../../images/Padour.png";
+import "./Header.css";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -27,12 +27,34 @@ const rightNavigation = [
 
 export default function Header() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="fixed top-0 left-0 w-full z-50 bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-center">
-          <div className="flex items-center gap-x-6">
+          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <img
+              alt="Padour Barbershop Logo"
+              src={Padour}
+              className="h-10 w-auto ml-2"
+            />
+            <h1 className="Title">&nbsp; Padour Barbershop</h1>
+          </div>
+          {/* Mobile menu button*/}
+          <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon
+                aria-hidden="true"
+                className="block h-6 w-6 group-open:hidden"
+              />
+              <XMarkIcon
+                aria-hidden="true"
+                className="hidden h-6 w-6 group-open:block"
+              />
+            </DisclosureButton>
+          </div>
+          <div className="hidden sm:flex items-center gap-x-6">
             {/* Left Navigation - About us & Services */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-20">
               {leftNavigation.map((item) => (
                 <NavLink
                   key={item.name}
@@ -43,7 +65,7 @@ export default function Header() {
                       isActive
                         ? "bg-gray-900 text-white"
                         : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                      "rounded-md px-3 py-2 text-sm font-medium"
+                      "rounded-md px-4 py-2 text-xl font-medium"
                     )
                   }
                 >
@@ -53,7 +75,7 @@ export default function Header() {
             </div>
 
             {/* Center - Logo */}
-            <div className="flex-shrink-0 ">
+            <div className="flex-shrink-0 mx-16">
               <img
                 alt="Padour Barbershop Logo"
                 src={Padour}
@@ -62,7 +84,7 @@ export default function Header() {
             </div>
 
             {/* Right Navigation - Gallery & FAQ */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-20">
               {rightNavigation.map((item) => (
                 <NavLink
                   key={item.name}
@@ -73,7 +95,7 @@ export default function Header() {
                       isActive
                         ? "bg-gray-900 text-white"
                         : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                      "rounded-md px-3 py-2 text-sm font-medium"
+                      "rounded-md px-4 py-2 text-xl font-medium"
                     )
                   }
                 >
@@ -84,6 +106,28 @@ export default function Header() {
           </div>
         </div>
       </div>
+      {/* Mobile Menu */}
+
+      <DisclosurePanel className="sm:hidden">
+        <div className="space-y-1 px-2 pb-3 pt-2">
+          {leftNavigation.concat(rightNavigation).map((item) => (
+            <NavLink
+              key={item.name}
+              as="a"
+              to={item.to}
+              aria-current={item.current ? "page" : undefined}
+              className={classNames(
+                item.current
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                "block rounded-md px-3 py-2 text-base font-medium"
+              )}
+            >
+              {item.name}
+            </NavLink>
+          ))}
+        </div>
+      </DisclosurePanel>
     </Disclosure>
   );
 }

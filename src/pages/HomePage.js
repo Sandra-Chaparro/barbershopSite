@@ -6,7 +6,7 @@ export default function HomePage() {
     <div className="homepage">
       <Helmet>
         <title>
-          Best barbershop in Allen, Texas. | Haircuts and Beard Grooming in
+          Best barbershop in Allen, Texas. | Men haircuts and Beard Grooming in
           North Dallas.
         </title>
         <meta
@@ -15,18 +15,51 @@ export default function HomePage() {
         />
       </Helmet>
 
-      <button className="BookApptButton">Book Appointment</button>
+      <div className="HeroSection">
+        <button
+          className="BookApptButton"
+          onClick={() =>
+            (window.location.href =
+              "https://book.squareup.com/appointments/dfgljw70mpc8dx/location/9PV6DKFGH39H7/services")
+          }
+        >
+          Book Appointment
+        </button>
+        <h1 className="ParaHeroSection">Barbershop in Allen, TX</h1>
+      </div>
 
-      <h1>
-        “More Than Just a Haircut – Where Style and Craftsmanship Come Together”
-      </h1>
-      <p>
-        {" "}
-        Our goal is to ensure you leave the chair looking and feeling your best.
-        We are convinced that a great haircut holds tremendous power—it goes
-        beyond mere grooming; it boosts your confidence and reflects your unique
-        style.
-      </p>
+      <div className="servicesContainer">
+        <h2 className="servicesTitle">Men Grooming Services</h2>
+        <div className="servicesGrid">
+          <div className="serviceItem">
+            <h3>Haircuts</h3>
+          </div>
+          <div className="serviceItem">
+            <h3>Beard</h3>
+            <img></img>
+          </div>
+          <div className="serviceItem">
+            <h3>Head Shave</h3>
+          </div>
+          <div className="serviceItem">
+            <h3>Beard Shave</h3>
+          </div>
+          <div className="serviceItem">
+            <h3>Designs</h3>
+          </div>
+          <div className="serviceItem">
+            <h3>Kids Haircut </h3>
+          </div>
+        </div>
+      </div>
+
+      <div className="reviewsContainer">
+        <h2 className="titles">Reviews</h2>
+      </div>
+
+      <div className="Location-MapContainer">
+        <h2 className="titles">Barbershop in Allen, Texas</h2>
+      </div>
     </div>
   );
 }
