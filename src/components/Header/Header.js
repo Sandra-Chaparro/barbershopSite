@@ -9,7 +9,7 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
-import Padour from "../../images/Padour.png";
+
 import "./Header.css";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -27,13 +27,13 @@ const rightNavigation = [
 
 export default function Header() {
   return (
-    <Disclosure as="nav" className="fixed top-0 left-0 w-full z-50 bg-gray-800">
+    <Disclosure as="nav" className="fixed top-0 left-0 w-full z-50 bg-slate-900">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-center">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <img
               alt="Padour Barbershop Logo"
-              src={Padour}
+              src="/images/Padour.png"
               className="h-10 w-auto ml-2"
             />
             <h1 className="Title">&nbsp; Padour Barbershop</h1>
@@ -78,7 +78,7 @@ export default function Header() {
             <div className="flex-shrink-0 mx-16">
               <img
                 alt="Padour Barbershop Logo"
-                src={Padour}
+               src="/images/Padour.png"
                 className="h-16 w-auto rounded-full"
               />
             </div>
