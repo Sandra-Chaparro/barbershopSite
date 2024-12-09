@@ -32,11 +32,11 @@ export default function Header() {
         <div className="relative flex h-16 items-center justify-center">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <img
-              alt="Padour Barbershop Logo"
+              alt="Logo"
               src="/images/Padour.png"
               className="h-10 w-auto ml-2"
             />
-            <h1 className="Title">&nbsp; Padour Barbershop</h1>
+            <h1 className="Title">&nbsp; MC the Barber</h1>
           </div>
           {/* Mobile menu button*/}
           <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
@@ -77,7 +77,7 @@ export default function Header() {
             {/* Center - Logo */}
             <div className="flex-shrink-0 mx-16">
               <img
-                alt="Padour Barbershop Logo"
+                alt="Logo"
                src="/images/Padour.png"
                 className="h-16 w-auto rounded-full"
               />
