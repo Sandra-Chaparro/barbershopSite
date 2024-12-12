@@ -20,7 +20,7 @@ export default function HomePage() {
     <div className="homepage">
       <Helmet>
         <title>
-          Best barbershop in Allen, Texas. | Men haircuts and Beard Grooming in
+          Barber in Allen, Texas. | Men haircuts and Beard Grooming in
           North Dallas.
         </title>
         <meta
@@ -43,25 +43,31 @@ export default function HomePage() {
       </div>
 
       <div className="servicesContainer bg-slate-900">
-        <h2 className="servicesTitle">Men Grooming Services</h2>
+        <h2 className="servicesTitle">Barber Services</h2>
         <div className="servicesGrid">
           <div className="serviceItem">
+          <img src="/images/scissorIcon.png" alt="services bullet" className="serviceIcon"></img>
             <h3>Haircuts</h3>
           </div>
           <div className="serviceItem">
+          <img src="/images/scissorIcon.png" alt="services bullet" className="serviceIcon"></img>
             <h3>Beard</h3>
-            <img></img>
+            
           </div>
           <div className="serviceItem">
+          <img src="/images/scissorIcon.png" alt="services bullet" className="serviceIcon"></img>
             <h3>Head Shave</h3>
           </div>
           <div className="serviceItem">
+          <img src="/images/scissorIcon.png" alt="services bullet" className="serviceIcon"></img>
             <h3>Beard Shave</h3>
           </div>
           <div className="serviceItem">
+          <img src="/images/scissorIcon.png" alt="services bullet" className="serviceIcon"></img>
             <h3>Designs</h3>
           </div>
           <div className="serviceItem">
+          <img src="/images/scissorIcon.png" alt="services bullet" className="serviceIcon"></img>
             <h3>Kids Haircut </h3>
           </div>
         </div>

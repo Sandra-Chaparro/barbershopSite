@@ -84,10 +84,19 @@
 }
 
 .serviceItem {
-  background-color: #44444C;
+  display: flex;
+  align-items: center;
   padding: 10px;
   border-radius: 4px;
 }
+
+.serviceIcon{
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
 /* .reviewsContainer {
   margin-bottom: 10px;
   padding: 20px 20px;
