@@ -1,5 +1,4 @@
 .homepage {
-
   position: relative;
   display: flex;
   flex-direction: column;
@@ -17,7 +16,7 @@
 }
 
 .custom-heading {
-  font-family: "Roboto", sans-serif;
+  font-family: "Playfair Display", "Roboto", sans-serif;
   margin: 0 auto;
   font-size: 3rem; /* Equivalent to text-4xl in Tailwind */
   font-weight: 700; /* Equivalent to font-bold */
@@ -42,22 +41,22 @@
 
 .HeroSection {
   background: url('../../../public/images/homeback.jpg')center / cover no-repeat;
-  margin-top: 55px;
+  margin-top: 85px;
   width: 100%;
   position: relative;
   z-index: 2;
   height: 700px;
+
 }
 
 .ParaHeroSection {
   color: black !important;
-  font-family: "Cormorant Unicase", "Roboto", sans-serif;
+  font-family: "Playfair Display", "Cormorant Unicase", "Roboto", sans-serif;
   font-size: 2.5rem;
   font-weight: 1000;
   z-index: 1;
   margin-top: 80px;
   margin-bottom: 80px;
-
 }
 
 .servicesContainer {
@@ -73,12 +72,20 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px 80px;
 }
+.servicesTitle {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Playfair Display";
+}
 
 .serviceItem {
   display: flex;
   align-items: center;
   padding: 10px;
   border-radius: 4px;
+  font-family: "Playfair Display";
 }
 
 .serviceIcon{
@@ -99,27 +106,17 @@
   width: 100%;
   margin-top: 140px;
   padding-top: 40px;
-
  position: relative; /* Ensure it stays above the overlay */
  z-index: 2; /* Position the gallery above the overlay */
  box-shadow: none;
 }
 
-.gpara{
-color: whitesmoke;
-font-size:xx-large;
-}
-
-.servicesTitle {
+.titles {
   color: white;
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
-}
-.titles {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
+  font-family: "Playfair Display";
 }
 
 .right-main-section {

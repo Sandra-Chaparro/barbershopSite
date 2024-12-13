@@ -4,11 +4,11 @@ import  ImageSlider from "./ImgSlider/ImageSlider"
 
 const IMAGES = [
   { url: "client1.jpg", alt: "Client 1 - Haircut" },
-  { url: "client2.jpg", alt: "Client 2 - Beard" },
-  { url: "client3.jpg", alt: "Client 3 - Haircut and Beard" },
-  { url: "client4.jpg", alt: "Client 1 - Haircut" },
-  { url: "client5.jpg", alt: "Client 2 - Beard" },
-  { url: "client6.jpg", alt: "Client 3 - Haircut and Beard" },
+  { url: "client10.jpg", alt: "Client 2 - Beard" },
+  { url: "client2.jpg", alt: "Client 3 - Haircut and Beard" },
+  { url: "client3.jpg", alt: "Client 1 - Haircut" },
+  { url: "client4.jpg", alt: "Client 2 - Beard" },
+  { url: "client5.jpg", alt: "Client 3 - Haircut and Beard" },
   { url: "client7.jpg", alt: "Client 1 - Haircut" },
   { url: "client8.jpg", alt: "Client 2 - Beard" },
   { url: "client9.jpg", alt: "Client 3 - Haircut and Beard" },
@@ -28,7 +28,6 @@ export default function HomePage() {
           content="Discover the best barbershop in North Dallas. Padour Barbershop offers expert haircuts, beard grooming, to make you look and feel your best."
         />
       </Helmet>
-     
       <div className="HeroSection">
         <button
           className="BookApptButton"
@@ -78,7 +77,7 @@ export default function HomePage() {
       </div> */}
 
       <div className="gallery bg-slate-900">
-      <p className="gpara">Gallery</p>
+      <p className="titles">Gallery</p>
       <ImageSlider images={IMAGES} />
         {/* <p className="titles">You’re not just getting a haircut, <br></br> you’re getting an experience. Your satisfaction is my top priority.</p> */}
       </div>
