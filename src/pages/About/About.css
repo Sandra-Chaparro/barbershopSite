@@ -1,0 +1,65 @@
+/* AboutPage.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    min-height: 70vh; /* Full height of the viewport */
+    padding: 0 20px; /* Added some padding on the sides */
+    box-sizing: border-box; /* Includes padding in height calculation */
+  }
+  
+  
+  .about-text {
+    flex: 1 1 50%; /* Takes up the remaining space */
+    font-weight: 500;
+    font-size: large;
+  }
+  
+  .about-image {
+    flex: 1 1 50%; /* Makes the image container take up 50% width */
+    display: flex;
+    text-align: center; /* Centers the image in the container */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center;
+  }
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    width: 400px; /* Adjust width as needed */
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      min-height: auto;
+      padding-top: 100px;
+    }
+  
+    .about-text {
+      padding-right: 0;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+  
+    .about-image img {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .about-text {
+      padding-left: 180px; /* Add space between text and image */
+      padding-right: 90px; 
+    }}
+  

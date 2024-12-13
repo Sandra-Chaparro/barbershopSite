@@ -11,7 +11,7 @@ import ContactPage from "./pages/Contact/ContactPage";
 function App() {
   return (
     <Router>
-      <div className="flex flex-col bg-gray-200 min-h-screen">
+      <div className="flex flex-col min-h-screen">
         {" "}
         {/* Applying background color here */}
         <Header />

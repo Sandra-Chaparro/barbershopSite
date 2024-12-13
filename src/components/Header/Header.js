@@ -31,11 +31,13 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-center">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <NavLink to="/" aria-label="Go to home">
             <img
               alt="Logo"
               src="/images/Padour.png"
               className="h-10 w-auto ml-2"
             />
+            </NavLink>
             <h1 className="Title">&nbsp; MC the Barber</h1>
           </div>
           {/* Mobile menu button*/}
@@ -76,11 +78,13 @@ export default function Header() {
 
             {/* Center - Logo */}
             <div className="flex-shrink-0 mx-16">
+            <NavLink to="/" aria-label="Go to home">
               <img
                 alt="Logo"
                src="/images/Padour.png"
                 className="h-16 w-auto rounded-full"
               />
+              </NavLink>
             </div>
 
             {/* Right Navigation - Gallery & FAQ */}
