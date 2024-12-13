@@ -73,7 +73,7 @@
   gap: 10px 80px;
 }
 .servicesTitle {
-  color: white;
+  color: black !important;
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
@@ -86,6 +86,9 @@
   padding: 10px;
   border-radius: 4px;
   font-family: "Playfair Display";
+}
+.serviceItem h3 {
+  color: black; /* Sets the text color to black */
 }
 
 .serviceIcon{
@@ -112,7 +115,7 @@
 }
 
 .titles {
-  color: white;
+  color: black;
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;

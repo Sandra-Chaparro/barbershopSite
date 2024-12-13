@@ -41,7 +41,7 @@ export default function HomePage() {
         <h1 className="ParaHeroSection">Barbershop in Allen, TX</h1>
       </div>
 
-      <div className="servicesContainer bg-slate-900">
+      <div className="servicesContainer bg-white">
         <h2 className="servicesTitle">Barber Services</h2>
         <div className="servicesGrid">
           <div className="serviceItem">
@@ -76,7 +76,7 @@ export default function HomePage() {
         <h2 className="titles">Reviews</h2>
       </div> */}
 
-      <div className="gallery bg-slate-900">
+      <div className="gallery bg-white">
       <p className="titles">Gallery</p>
       <ImageSlider images={IMAGES} />
         {/* <p className="titles">You’re not just getting a haircut, <br></br> you’re getting an experience. Your satisfaction is my top priority.</p> */}
