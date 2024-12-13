@@ -28,7 +28,7 @@ export default function HomePage() {
           content="Discover the best barbershop in North Dallas. Padour Barbershop offers expert haircuts, beard grooming, to make you look and feel your best."
         />
       </Helmet>
-
+     
       <div className="HeroSection">
         <button
           className="BookApptButton"

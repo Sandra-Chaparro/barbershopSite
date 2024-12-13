@@ -1,27 +1,11 @@
 .homepage {
-  background-image: url('../../../public/images/background.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-top: 60px;
-  min-height: 100vh;
+
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;  /* Center content vertically */
+  align-items: center;      /* Center content horizontally */
   text-align: center;
-}
-
-.homepage::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.85); /* Dark overlay */
-  z-index: 1;
-  box-shadow: 0 0 8px 8px black inset;
 }
 
 .homepage h1,
@@ -48,7 +32,8 @@
   border-radius: 5px;
   z-index: 2;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 280px;
+  font-weight: 800;
 }
 
 .BookApptButton:hover {
@@ -56,17 +41,23 @@
 }
 
 .HeroSection {
+  background: url('../../../public/images/homeback.jpg')center / cover no-repeat;
+  margin-top: 55px;
+  width: 100%;
   position: relative;
   z-index: 2;
-  margin-top: 18%;
+  height: 700px;
 }
 
 .ParaHeroSection {
+  color: black !important;
   font-family: "Cormorant Unicase", "Roboto", sans-serif;
   font-size: 2.5rem;
+  font-weight: 1000;
   z-index: 1;
-  margin-top: 30px;
+  margin-top: 80px;
   margin-bottom: 80px;
+
 }
 
 .servicesContainer {

@@ -1,0 +1,9 @@
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    color: white;
+
+    margin-top: auto;  /* Ensures it stays at the bottom of the page */
+}
