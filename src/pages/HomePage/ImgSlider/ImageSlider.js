@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from "lucide-react";
 import "./image-slider.css";
 
-function ImageSlider({ images }) {
+export default function ImageSlider({ images }) {
   const [imageIndex, setImageIndex] = useState(0);
 
   function showNextImage() {
@@ -76,11 +76,7 @@ function ImageSlider({ images }) {
             aria-label={`View Image ${index + 1}`}
             onClick={() => setImageIndex(index)}
           >
-            {index === imageIndex ? (
-              <CircleDot aria-hidden />
-            ) : (
-              <Circle aria-hidden />
-            )}
+       
           </button>
         ))}
       </div>
@@ -88,5 +84,3 @@ function ImageSlider({ images }) {
     </section>
   );
 }
-
-export default ImageSlider;

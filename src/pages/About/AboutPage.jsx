@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../Layout/Layout";
 import "./About.css"
 
-const AboutPage = () => {
+export default function AboutPage () {
   return (
     <Layout>
   <div className="about-container">
@@ -25,4 +25,3 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;

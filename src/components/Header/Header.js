@@ -71,7 +71,7 @@ export default function Header() {
                     classNames(
                       isActive
                         ? "bg-gray-900 text-white"
-                        : "text-black hover:bg-gray-700 hover:text-white",
+                        : "text-black hover:bg-gray-700 hover:text-black",
                       "rounded-md px-4 py-2 text-xl font-medium"
                     )
                   }
@@ -125,7 +125,7 @@ export default function Header() {
               "block rounded-md px-3 py-2 text-base font-medium",
               item.current
                 ? "bg-gray-900 text-white"
-                : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                : "text-black hover:bg-gray-700 hover:text-white"
             )}
             aria-current={item.current ? "page" : undefined}
           >
