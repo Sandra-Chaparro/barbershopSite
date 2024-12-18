@@ -9,18 +9,17 @@
     overflow: hidden; /* Hide overflowing content */
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    margin-top: auto;
+    justify-content: space-between;
+    align-items: center;
   }
   .review:hover {
     box-shadow: var(--dark-shadow);
   }
   .stars-img{
+    padding: 0;
     width: 40%;
-    height: 90%;
+    height: auto;
     object-fit: contain;
-    margin-top: 10%; /* Adjust margin to place the image */
-    align-self: center; /* Center the image horizontally */
   }
   .quote-icon {
     position: absolute;
@@ -39,17 +38,19 @@
   .author {
     margin-bottom: 0.25rem;
     font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 0;
   }
   .info {
     margin-bottom: 0.75rem;
     font-size: 0.85rem;
+    flex-shrink: 0;
   }
 
   .button-container {
-    position: absolute;
-    bottom: 29px; /* Adjust as needed */
-    left: 28%;
-    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 1rem; 
   }
 
   .prev-btn,
@@ -86,3 +87,40 @@
   font-size: 4rem;
   color:red;
   }
+  /* Ensure arrows are visible on mobile */
+@media (max-width: 768px) {
+    .review {
+        flex-direction: column; /* Stack items vertically */
+        justify-content: flex-start; /* Keep author, image at the top */
+        height: auto; /* Allow height to adjust based on content */
+      }
+    
+      .author,
+      .stars-img,
+      .info {
+        order: 1; /* Ensure they are at the top */
+      }
+    
+      .button-container {
+        margin-top: auto; /* Push buttons to the bottom */
+      }
+    
+      /* Position the arrows on the left and right of the info on mobile */
+      .prev-btn,
+      .next-btn {
+        display: block !important;
+        position: absolute; /* Keep absolute positioning */
+        top: 50%;
+        transform: translateY(-50%); /* Vertically center the arrows */
+        margin-top: 0; /* Remove any additional margin-top */
+      }
+    
+      .prev-btn {
+        left: 1px; /* Adjust the distance from the left */
+      }
+    
+      .next-btn {
+        right: 10px; /* Adjust the distance from the right */
+      }
+  }
+  
