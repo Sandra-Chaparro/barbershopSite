@@ -8,15 +8,19 @@ import AboutPage from "./pages/About/AboutPage";
 import ServicesPage from "./pages/Services/ServicesPage";
 import ContactPage from "./pages/Contact/ContactPage";
 
+
 function App() {
   return (
+
     <Router>
+      
       <div className="flex flex-col min-h-screen">
         {" "}
         {/* Applying background color here */}
         <Header />
         <div className="flex-grow">
           <Routes>
+         
             <Route path="/" element={<HomePage />} />
 
             <Route path="/about" element={<AboutPage />} />
@@ -27,6 +31,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+
   );
 }
 

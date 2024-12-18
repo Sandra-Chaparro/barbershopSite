@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import "./HomePage.css"; // Import the CSS file
 import  ImageSlider from "./ImgSlider/ImageSlider"
+import Review from "./ Reviews/Reviews"
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 
 const IMAGES = [
   { url: "client1.jpg", alt: "Client 1 - Haircut" },
@@ -13,9 +15,30 @@ const IMAGES = [
   { url: "client8.jpg", alt: "Client 2 - Beard" },
   { url: "client9.jpg", alt: "Client 3 - Haircut and Beard" },
 ]
-
+const libraries = ['places'];
+const mapContainerStyle = {
+  width: '100%',
+  height: '400px',
+};
+const center = {
+  lat: 33.101060,  // default latitude
+  lng: -96.652077, // default longitude
+};
 
 export default function HomePage() {
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    libraries,
+  });
+
+  if (loadError) {
+    return <div>Error loading maps</div>;
+  }
+
+  if (!isLoaded) {
+    return <div>Loading maps</div>;
+  }
+
   return (
     <div className="homepage">
       <Helmet>
@@ -72,14 +95,26 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* <div className="reviewsContainer">
-        <h2 className="titles">Reviews</h2>
-      </div> */}
 
       <div className="gallery bg-white">
       <p className="titles">Gallery</p>
       <ImageSlider images={IMAGES} />
         {/* <p className="titles">You’re not just getting a haircut, <br></br> you’re getting an experience. Your satisfaction is my top priority.</p> */}
+      </div>
+      <div className="reviewsAndLocationContainer">
+        <div className="reviewsContainer">
+          <Review/>
+        </div>
+        <div className="mapContainer">
+        <GoogleMap
+        mapContainerStyle={mapContainerStyle}
+        zoom={10}
+        center={center}
+      >
+        <Marker position={center} />
+      </GoogleMap>
+        </div>
+
       </div>
 
 

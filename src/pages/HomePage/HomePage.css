@@ -72,6 +72,14 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px 80px;
 }
+.titles {
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Playfair Display";
+}
+
 .servicesTitle {
   color: black !important;
   font-size: 2rem;
@@ -98,13 +106,6 @@
   margin-right: 5px;
 }
 
-/* .reviewsContainer {
-  margin-bottom: 10px;
-  padding: 20px 20px;
-  background-color: #eeeeee;
-} */
-
-/* Location Section */
 .gallery {
   width: 100%;
   margin-top: 140px;
@@ -114,32 +115,28 @@
  box-shadow: none;
 }
 
-.titles {
-  color: black;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-  font-family: "Playfair Display";
-}
-
-.right-main-section {
-  flex: 1; /* Allow this section to grow */
-  margin: 0 20px 0 20px; /* Space between left and right sections */
-  padding: 0 20px 0 20px;
-  z-index: 1;
-}
-
-.left-main-section {
-  flex: 1; /* Allow this section to grow */
-  margin: 0 20px 0 20px; /* Space between left and right sections */
-  padding: 0 20px 0 20px;
+.reviewsAndLocationContainer{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100vw; /* Full viewport width */
+  max-width: 90%; /* Prevents overflow */
+  gap: 20px;
+  padding: 20px;
 }
-
-.img-carousel{
-  height: auto;
+.reviewsContainer, .mapContainer {
+  width: 48%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional */
+  overflow: hidden;
 }
+/* .reviewsContainer{
+  background-color: red;
+}
+.mapContainer{
+  background-color: blue;
+} */
 
 @media (max-width: 768px) {
   .homepage {
