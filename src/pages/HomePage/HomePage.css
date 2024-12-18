@@ -164,17 +164,13 @@
     grid-template-columns: 1fr; /* Switch to a single column */
     gap: 10px; /* Adjust the gap as needed */
   }
-  .right-main-section {
-    flex: 1; /* Allow this section to grow */
-    margin: 0 20px 0 20px; /* Space between left and right sections */
-    padding: 0 20px 0 20px;
-    z-index: 1;
-    font-size: 1rem;
+  .reviewsAndLocationContainer {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center items horizontally */
   }
 
-  .left-main-section {
-    flex: 1; /* Allow this section to grow */
-    margin: 0 20px 0 20px; /* Space between left and right sections */
-    padding: 0 20px 0 20px;
+  .reviewsContainer, .mapContainer {
+    width: 100%; /* Full width on mobile */
   }
+
 }
