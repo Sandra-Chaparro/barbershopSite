@@ -18,6 +18,15 @@ export default function AboutPage () {
       </div>
       <div className="about-image">
         <img src="/images/aboutImg.jpg"></img>
+        <button
+          className="bookApptButton"
+          onClick={() =>
+            (window.location.href =
+              "https://book.squareup.com/appointments/dfgljw70mpc8dx/location/9PV6DKFGH39H7/services")
+          }
+        >
+          Book Appointment
+        </button>
       </div>
     
     </div>

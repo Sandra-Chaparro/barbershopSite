@@ -26,6 +26,7 @@ body, html {
   
   .about-image {
     flex: 1 1 50%; /* Makes the image container take up 50% width */
+    flex-direction: column;
     display: flex;
     text-align: center; /* Centers the image in the container */
     justify-content: center; /* Centers the image horizontally */
@@ -36,6 +37,13 @@ body, html {
     height: auto;
     width: 400px; /* Adjust width as needed */
     border-radius: 8px;
+  }
+  .bookApptButton{
+    padding: 15px 20px ;
+    border-radius: 10px;
+    background-color: black;
+    color: white ;
+    margin-top: 60px;
   }
   
   @media (max-width: 768px) {

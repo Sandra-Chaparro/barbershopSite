@@ -61,8 +61,8 @@
 
 .servicesContainer {
   z-index: 1;
-  padding: 10px 20px;
-  margin-top: 140px;
+  padding: 100px 20px 100px;
+  margin-top: 50px;
   border-radius: 5px;
   margin-bottom: 10px;
   background-color: black;
