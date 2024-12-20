@@ -64,13 +64,19 @@
   padding: 10px 20px;
   margin-top: 140px;
   border-radius: 5px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  background-color: black;
+  width: 100%;
+
+  justify-content: center;
 }
 
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px 80px;
+  margin: 0 auto;
+  max-width: 1200px
 }
 .titles {
   color: black;
@@ -81,7 +87,7 @@
 }
 
 .servicesTitle {
-  color: black !important;
+  color: white !important;
   font-size: 2rem;
   margin-bottom: 20px;
   text-align: center;
@@ -96,7 +102,7 @@
   font-family: "Playfair Display";
 }
 .serviceItem h3 {
-  color: black; /* Sets the text color to black */
+  color: white !important; /* Sets the text color to black */
 }
 
 .serviceIcon{
@@ -108,7 +114,7 @@
 
 .gallery {
   width: 100%;
-  margin-top: 140px;
+  margin-top: 40px;
   padding-top: 40px;
  position: relative; /* Ensure it stays above the overlay */
  z-index: 2; /* Position the gallery above the overlay */
