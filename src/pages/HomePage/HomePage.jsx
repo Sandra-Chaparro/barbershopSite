@@ -3,6 +3,8 @@ import "./HomePage.css"; // Import the CSS file
 import  ImageSlider from "./ImgSlider/ImageSlider"
 import Review from "./ Reviews/Reviews"
 import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import React from "react";
+import GoogleMapReact from "google-map-react";
 
 const IMAGES = [
   { url: "client1.jpg", alt: "Client 1 - Haircut" },
@@ -25,6 +27,12 @@ const center = {
   lng: -96.652077, // default longitude
 };
 
+
+
+const AnyReactComponent = ({ text }) => (
+  <div style={{ color: "red", fontWeight: "bold" }}>{text}</div>
+);
+
 export default function HomePage() {
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -38,6 +46,16 @@ export default function HomePage() {
   if (!isLoaded) {
     return <div>Loading maps</div>;
   }
+
+  const handleApiLoaded = (map, maps) => {
+    // use map and maps objects
+    console.log("API Loaded:", map, maps);
+  };
+
+  const defaultProps = {
+    center: { lat: 33.101087, lng: -96.652313 },   
+    zoom: 15,
+  };
 
   return (
     <div className="homepage">
@@ -105,14 +123,21 @@ export default function HomePage() {
         <div className="reviewsContainer">
           <Review/>
         </div>
-        <div className="mapContainer">
-        <GoogleMap
-        mapContainerStyle={mapContainerStyle}
-        zoom={10}
-        center={center}
+        <div className="mapContainer" style={{ height: "440px", width: "50%" }}>
+
+
+
+    <GoogleMapReact
+        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
+        defaultCenter={defaultProps.center}
+        defaultZoom={defaultProps.zoom}
+        yesIWantToUseGoogleMapApiInternals
+        onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
       >
-        <Marker position={center} />
-      </GoogleMap>
+        <AnyReactComponent lat={33.101087} lng={-96.652313} text="Barbershop" />
+      </GoogleMapReact>
+
+   
         </div>
 
       </div>
@@ -122,3 +147,4 @@ export default function HomePage() {
     </div>
   );
 }
+
