@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import "./HomePage.css"; // Import the CSS file
 import  ImageSlider from "./ImgSlider/ImageSlider"
 import Review from "./ Reviews/Reviews"
-import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import {useLoadScript  } from '@react-google-maps/api';
 import React from "react";
 import GoogleMapReact from "google-map-react";
 
@@ -127,16 +127,9 @@ export default function HomePage() {
 
 
 
-    <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-        yesIWantToUseGoogleMapApiInternals
-        onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
-      >
-        <AnyReactComponent lat={33.101087} lng={-96.652313} text="Barbershop" />
-      </GoogleMapReact>
-
+        <iframe width="600" height="450" style={{border:0}} loading="lazy" allowfullscreen
+src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJpQ8rgggVTIYRbmXkl5evCLA&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`}
+></iframe>
    
         </div>
 
