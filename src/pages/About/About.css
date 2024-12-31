@@ -56,9 +56,11 @@ body, html {
   
     .about-text {
       padding-right: 0;
-      text-align: center;
+      text-align: justify;
       font-size: small;
       padding-bottom: 30px;
+      margin-top: 50px;
+      margin-bottom: 20px;
     }
   
     .about-image img {
