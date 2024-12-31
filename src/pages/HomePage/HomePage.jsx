@@ -123,13 +123,11 @@ export default function HomePage() {
         <div className="reviewsContainer">
           <Review/>
         </div>
-        <div className="mapContainer" style={{ height: "440px", width: "50%" }}>
+        <div className="mapContainer" >
 
-
-
-        <iframe width="600" height="450" style={{border:0}} loading="lazy" allowfullscreen
-src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJpQ8rgggVTIYRbmXkl5evCLA&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`}
-></iframe>
+        <iframe  className="mapItem" loading="lazy" allowfullscreen
+        src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJpQ8rgggVTIYRbmXkl5evCLA&key=${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`}
+        ></iframe>
    
         </div>
 
