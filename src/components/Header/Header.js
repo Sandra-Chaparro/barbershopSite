@@ -17,13 +17,13 @@ function classNames(...classes) {
 }
 
 const leftNavigation = [
-  { name: "About", to: "/about", current: true },
-  { name: "Services", to: "/services", current: false },
+  { name: "About", to: "/about" },
+  { name: "Services", to: "/services" },
 ];
 
 const rightNavigation = [
-  { name: "Gallery", to: "/gallery", current: false },
-  { name: "FAQ", to: "/faq", current: false },
+  { name: "Gallery", to: "/gallery"},
+  { name: "FAQ", to: "/faq" },
 ];
 
 export default function Header() {
@@ -127,7 +127,7 @@ export default function Header() {
                 ? "bg-gray-900 text-white"
                 : "text-black hover:bg-gray-700 hover:text-white"
             )}
-            aria-current={item.current ? "page" : undefined}
+            aria-current={({ isActive }) => (isActive ? "page" : undefined)}
           >
             {item.name}
               </DisclosureButton>
