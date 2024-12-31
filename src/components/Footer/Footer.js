@@ -82,7 +82,7 @@ const Footer = () => {
 
       {/* Centered footer text */}
       <div className="flex justify-center py-2 text-center text-gray-500">
-        <p>2024 Padour Barbershop, LLC. All rights reserved</p>
+        <p>2024 MC the barber, LLC. All rights reserved</p>
       </div>
     </div>
   );
