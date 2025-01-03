@@ -59,7 +59,7 @@
   margin-bottom: 80px;
 }
 
-.servicesContainer {
+.servicesHPContainer {
   z-index: 1;
   padding: 100px 20px 100px;
   margin-top: 50px;
@@ -67,11 +67,9 @@
   margin-bottom: 10px;
   background-color: black;
   width: 100%;
-
-  justify-content: center;
 }
 
-.servicesGrid {
+.servicesHPGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px 80px;
@@ -86,7 +84,7 @@
   font-family: "Playfair Display";
 }
 
-.servicesTitle {
+.servicesHPTitle {
   color: white !important;
   font-size: 2rem;
   margin-bottom: 20px;
@@ -94,7 +92,7 @@
   font-family: "Playfair Display";
 }
 
-.serviceItem {
+.serviceHPItem {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -143,6 +141,12 @@
   width: 100%;
 } 
 
+@media (min-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 columns on desktop */
+  }
+}
+
 @media (max-width: 768px) {
   .homepage {
     justify-content: space-between;
@@ -165,7 +169,7 @@
     font-size: 1rem;
     margin-top: 95px;
   }
-  .servicesGrid {
+  .servicesHPGrid {
     grid-template-columns: 1fr; /* Switch to a single column */
     gap: 10px; /* Adjust the gap as needed */
   }

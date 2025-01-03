@@ -38,9 +38,9 @@ const ServicesPage = () => {
   return(
     <div className="servicesContainerPage">
       <h1 className="servicesPageTitle">Barbering Services</h1>
-      <div className="servicesGrid">
+      <div className="servicesPageGrid">
       {services.map((service, index) => 
-      <div className="service-item" key={index}>
+      <div className="servicePageitem" key={index}>
          <img
             src={service.icon}
             alt="barberpole image"
