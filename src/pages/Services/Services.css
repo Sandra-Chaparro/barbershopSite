@@ -41,6 +41,6 @@ p {
         grid-template-columns: 1fr; /* One column for smaller screens */
     }
     .service-item{
-        width: 370px;
+        width: 360px;
     }
 }
