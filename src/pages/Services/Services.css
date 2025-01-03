@@ -47,9 +47,8 @@ p {
     color: #333; /* Optional: a darker color for the description for better readability */
 }
 @media (max-width: 768px) {
-    .servicesContainerPage {
-        margin-top: 130px;
-        grid-template-columns: 1fr; /* One column for smaller screens */
+    .servicesGrid {
+        grid-template-columns: 1fr; /* Switch to one column in mobile mode */
     }
     .service-item{
         width: 340px;
