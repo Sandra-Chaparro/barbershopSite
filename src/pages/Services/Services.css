@@ -1,0 +1,43 @@
+.servicesContainerPage{
+ 
+    margin-top: 270px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.service-icon{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.service-item{
+    
+    width: 550px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: black;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-weight: bold; /* Makes the service name bold */
+    font-size: 1.1rem; /* Makes the service name a bit larger */
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1rem; /* Makes the description font size a little smaller than the service name */
+    color: #333; /* Optional: a darker color for the description for better readability */
+}
+@media (max-width: 768px) {
+    .servicesContainerPage {
+        grid-template-columns: 1fr; /* One column for smaller screens */
+    }
+}
