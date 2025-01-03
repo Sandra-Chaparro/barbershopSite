@@ -18,11 +18,7 @@
     gap: 20px;
     justify-items: center; /* Keeps service items centered in the grid */
 }
-.servicesContainerPage .servicesPageGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Enforce 2 columns */
-    gap: 20px;
-  }
+
 
 .service-icon{
     width: 40px;
@@ -56,7 +52,7 @@ p {
         grid-template-columns: 1fr; /* Switch to one column in mobile mode */
     }
     .servicePageitem{
-        width: 340px;
+        width: 100%;
     }
 }
 
