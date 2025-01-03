@@ -1,14 +1,24 @@
 .servicesContainerPage{
- 
-    margin-top: 270px;
+    margin-top: 100px;
+}
+
+.servicesTitle {
+    justify-content: center; /* Center the title horizontally */
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    color: black !important;
+  }
+  
+  .servicesGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    justify-items: center;
-    align-items: center;
-}
+    justify-items: center; /* Keeps service items centered in the grid */
+  }
 
-.service-icon{
+  .service-icon{
     width: 40px;
     height: 40px;
     padding: 5px;
@@ -16,8 +26,7 @@
 }
 
 .service-item{
-    
-    width: 550px;
+    width: 100%;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -25,6 +34,7 @@
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 h2 {
     font-weight: bold; /* Makes the service name bold */
