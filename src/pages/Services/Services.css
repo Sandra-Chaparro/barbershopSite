@@ -38,6 +38,7 @@ p {
 }
 @media (max-width: 768px) {
     .servicesContainerPage {
+        margin-top: 130px;
         grid-template-columns: 1fr; /* One column for smaller screens */
     }
     .service-item{
