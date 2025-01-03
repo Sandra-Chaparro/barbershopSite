@@ -2,13 +2,14 @@
     margin-top: 100px;
 }
 
-.servicesTitle {
+.servicesPageTitle {
     justify-content: center; /* Center the title horizontally */
+    text-align: center;
     font-size: 2rem;
     font-weight: bold;
     padding-top: 50px;
     margin-bottom: 50px;
-    color: black !important;
+    color: black ;
   }
   
   .servicesGrid {

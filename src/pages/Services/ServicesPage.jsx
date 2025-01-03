@@ -37,7 +37,7 @@ const ServicesPage = () => {
 
   return(
     <div className="servicesContainerPage">
-      <h1 className="servicesTitle">Barbering Services</h1>
+      <h1 className="servicesPageTitle">Barbering Services</h1>
       <div className="servicesGrid">
       {services.map((service, index) => 
       <div className="service-item" key={index}>
