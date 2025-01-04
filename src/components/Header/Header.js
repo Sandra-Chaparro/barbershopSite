@@ -28,8 +28,6 @@ const rightNavigation = [
 
 export default function Header() {
  
-
-
   return (
     <Disclosure as="nav" className="fixed top-0 left-0 w-full z-50 bg-white">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -71,7 +69,7 @@ export default function Header() {
                     classNames(
                       isActive
                         ? "bg-gray-900 text-white"
-                        : "text-black hover:bg-gray-700 hover:text-black",
+                        : "text-black hover:bg-gray-700 hover:text-white",
                       "rounded-md px-4 py-2 text-xl font-medium"
                     )
                   }

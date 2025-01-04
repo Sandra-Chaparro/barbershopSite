@@ -15,10 +15,11 @@
 .servicesPageGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-items: center; /* Keeps service items centered in the grid */
+    max-width: 80%;
+    column-gap: 0px;
+    row-gap: 20px;
+    margin: 0 auto;
 }
-
 
 .service-icon{
     width: 40px;
@@ -28,13 +29,14 @@
 }
 
 .servicePageitem{
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     color: black;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
 }
 
 h2 {
@@ -47,6 +49,17 @@ p {
     font-size: 1rem; /* Makes the description font size a little smaller than the service name */
     color: #333; /* Optional: a darker color for the description for better readability */
 }
+
+.bookButtononServices{
+    display: block;
+    padding: 15px 20px ;
+    border-radius: 10px;
+    background-color: black;
+    color: white ;
+    margin: 60px auto;
+    
+}
+
 @media (max-width: 768px) {
     .servicesPageGrid {
         grid-template-columns: 1fr; /* Switch to one column in mobile mode */
