@@ -49,7 +49,7 @@ const Footer = () => {
                   className={`py-.5 text-gray-500 ${
                     section.title === "Hours"
                       ? ""
-                      : "hover:text-white cursor-pointer"
+                      : "hover:text-black cursor-pointer"
                   }`}
                 >
                   {item}
@@ -68,10 +68,10 @@ const Footer = () => {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-500 hover:text-white"
+                className="flex items-center space-x-2 text-gray-500 hover:text-black"
               >
                 <item.icon className="text-gray-500 text-2xl" />
-                <span className="text-gray-500 hover:text-white">
+                <span className="text-gray-500 hover:text-black">
                   {item.name}
                 </span>
               </a>
