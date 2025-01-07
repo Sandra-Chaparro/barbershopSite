@@ -40,8 +40,8 @@
 }
 
 .HeroSection {
-  background: url('../../../public/images/homeback.jpg')center / cover no-repeat;
-  margin-top: 15px;
+  background: url('../../../public/images/background.jpg')center / cover no-repeat;
+  margin-top: 55px;
   width: 100%;
   position: relative;
   z-index: 2;
