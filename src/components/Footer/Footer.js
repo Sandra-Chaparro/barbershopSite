@@ -13,9 +13,8 @@ const sections = [
   {
     title: "Policy",
     items: [
-      "Privacy Policy",
-      "Appointment Cancelation Policy",
-      "Refund Policy",
+      {name: "Appointment Cancellation Policy", link: "/ApptCancellation"},
+      {name: "Refund Policy", link: "/Refund Policy"},
     ],
   },
   {
@@ -29,7 +28,6 @@ const sections = [
 ];
 
 const socialMedia = [
-  { name: "Facebook", icon: FaFacebook, link: "https://www.facebook.com/" },
   {
     name: "Instagram",
     icon: FaInstagram,

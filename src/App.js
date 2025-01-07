@@ -8,7 +8,8 @@ import AboutPage from "./pages/About/AboutPage";
 import ServicesPage from "./pages/Services/ServicesPage";
 import Gallery from "./pages/Gallery/Gallery";
 import FAQ from "./pages/FAQ/FAQ";
-import Jobs from "./pages/Jobs/Jobs";
+import Jobs from "./pages/FooterPages/Jobs";
+import ApptCancellation from "./pages/FooterPages/ApptCancellation";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/jobs" element={<Jobs />} />
+            <Route path="/ApptCancellation" element={<ApptCancellation />} />
           </Routes>
         </div>
         <Footer />
