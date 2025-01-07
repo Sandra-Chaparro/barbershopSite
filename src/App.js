@@ -8,6 +8,7 @@ import AboutPage from "./pages/About/AboutPage";
 import ServicesPage from "./pages/Services/ServicesPage";
 import Gallery from "./pages/Gallery/Gallery";
 import FAQ from "./pages/FAQ/FAQ";
+import Jobs from "./pages/Jobs/Jobs";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/jobs" element={<Jobs />} />
           </Routes>
         </div>
         <Footer />

@@ -20,7 +20,11 @@ const sections = [
   },
   {
     title: "Company",
-    items: ["About", "Blog", "Jobs"],
+    items: [
+      {name: "About", link: "/about"},
+      {name: "Blog", link: null},
+      {name: "Jobs", link: "/jobs"},
+    ],
   },
 ];
 
@@ -43,18 +47,22 @@ const Footer = () => {
           <div key={index}>
             <h6 className="font-bold uppercase pt-1">{section.title}</h6>
             <ul>
-              {section.items.map((item, i) => (
-                <li
-                  key={i}
-                  className={`py-.5 text-gray-500 ${
-                    section.title === "Hours"
-                      ? ""
-                      : "hover:text-black cursor-pointer"
-                  }`}
-                >
-                  {item}
-                </li>
-              ))}
+            {section.items.map((item, i) =>
+                typeof item === "string" ? (
+                  <li key={i} className="py-.5 text-gray-500">
+                    {item}
+                  </li>
+                ) : (
+                  <li
+                    key={i}
+                    className="py-.5 text-gray-500 hover:text-black cursor-pointer"
+                  >
+                    <a href={item.link} className="hover:text-black">
+                      {item.name}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
         ))}

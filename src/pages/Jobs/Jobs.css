@@ -1,0 +1,32 @@
+body{
+ 
+}
+
+.jobsContainer{
+  
+    margin-top: 80px;
+    height: 100%;
+    margin-top: 100px;
+}
+.NoVacantMessage{
+    color: black;
+    font-size: x-large;
+    padding-top: 90px;
+    padding-left: 280px;
+
+}
+
+.HomeButton{
+    display: block;
+    padding: 15px 20px ;
+    border-radius: 10px;
+    background-color: black;
+    color: white ;
+    margin: 90px auto;
+}
+@media (max-width: 768px) {
+    .NoVacantMessage{
+        padding-left: 140px;
+    
+    }
+}
