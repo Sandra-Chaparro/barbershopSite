@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* Center content vertically */
-  align-items: center;      /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
   text-align: center;
 }
 
@@ -40,17 +40,17 @@
 }
 
 .HeroSection {
-  background: url('../../../public/images/background.jpg')center / cover no-repeat;
+  background: url("../../../public/images/background.jpg") center / cover
+    no-repeat;
   margin-top: 55px;
   width: 100%;
   position: relative;
   z-index: 2;
   height: 700px;
-
 }
 
 .HeroSection::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -60,7 +60,8 @@
   z-index: 1; /* Ensure it appears above the background image but below text */
 }
 
-.BookApptButton, .ParaHeroSection {
+.BookApptButton,
+.ParaHeroSection {
   position: relative; /* Keeps them above the overlay */
   z-index: 2; /* Ensures they are above the overlay */
 }
@@ -89,7 +90,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 10px 80px;
   margin: 0 auto;
-  max-width: 1200px
+  max-width: 1200px;
 }
 .titles {
   color: black;
@@ -118,7 +119,7 @@
   color: white !important; /* Sets the text color to black */
 }
 
-.serviceIcon{
+.serviceIcon {
   width: 40px;
   height: 40px;
   padding: 5px;
@@ -129,12 +130,12 @@
   width: 100%;
   margin-top: 40px;
   padding-top: 40px;
- position: relative; /* Ensure it stays above the overlay */
- z-index: 2; /* Position the gallery above the overlay */
- box-shadow: none;
+  position: relative; /* Ensure it stays above the overlay */
+  z-index: 2; /* Position the gallery above the overlay */
+  box-shadow: none;
 }
 
-.reviewsAndLocationContainer{
+.reviewsAndLocationContainer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -143,7 +144,8 @@
   gap: 20px;
   padding: 20px;
 }
-.reviewsContainer, .mapContainer {
+.reviewsContainer,
+.mapContainer {
   width: 48%;
   padding: 20px;
   border-radius: 8px;
@@ -151,10 +153,10 @@
   overflow: hidden;
 }
 
-.mapItem{
+.mapItem {
   height: 400px;
   width: 100%;
-} 
+}
 
 @media (min-width: 1024px) {
   .servicesGrid {
@@ -166,7 +168,7 @@
   .homepage {
     justify-content: space-between;
     background-size: 160%;
-    background-position: center top;   
+    background-position: center top;
   }
 
   .custom-heading {
@@ -185,16 +187,16 @@
     margin-top: 95px;
   }
   .servicesHPGrid {
-    grid-template-columns: 1fr; /* Switch to a single column */
-    gap: 10px; /* Adjust the gap as needed */
+    grid-template-columns: repeat(2, 1fr); /* Switch to a single column */
+    gap: 8px; /* Adjust the gap as needed */
   }
   .reviewsAndLocationContainer {
     flex-direction: column; /* Stack vertically */
     align-items: center; /* Center items horizontally */
   }
 
-  .reviewsContainer, .mapContainer {
+  .reviewsContainer,
+  .mapContainer {
     width: 100%; /* Full width on mobile */
   }
-
 }
