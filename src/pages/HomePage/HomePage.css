@@ -33,20 +33,25 @@
   text-align: center;
   margin-top: 280px;
   font-weight: 800;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+  background-color 0.6s ease, 
+  color 0.6s ease; /* Smooth transitions with longer duration */
 }
 
 .BookApptButton:hover {
   cursor: pointer;
+  background-color: #B4B4B8; 
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .HeroSection {
-  background: url("../../../public/images/background.jpg") center / cover
+  background: url("../../../public/images/background.jpg") center / contain
     no-repeat;
-  margin-top: 55px;
   width: 100%;
+  height: 80vh; /* Ensure full viewport height */
   position: relative;
   z-index: 2;
-  height: 700px;
 }
 
 .HeroSection::before {
@@ -56,15 +61,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Dark overlay with 50% opacity */
+  background: rgba(0, 0, 0, 0.9); /* Dark overlay with 50% opacity */
   z-index: 1; /* Ensure it appears above the background image but below text */
 }
 
-.BookApptButton,
-.ParaHeroSection {
-  position: relative; /* Keeps them above the overlay */
-  z-index: 2; /* Ensures they are above the overlay */
-}
+
 .ParaHeroSection {
   color: white;
   font-family: "Playfair Display", "Cormorant Unicase", "Roboto", sans-serif;
@@ -72,17 +73,25 @@
   font-weight: 1000;
   z-index: 1;
   margin-top: 80px;
+  margin-bottom: 10px;
+}
+.SubParaHeroSection{
+  color: white;
+  font-family: "Playfair Display", "Cormorant Unicase", "Roboto", sans-serif;
+  font-size: 1.5rem;
+  z-index: 2;
+  margin-top: 5px;
   margin-bottom: 80px;
 }
 
 .servicesHPContainer {
-  z-index: 1;
-  padding: 100px 20px 100px;
-  margin-top: 50px;
+  position: relative;
+  z-index: 3;
+  margin-top: -85px;
+  padding: 70px 20px 100px;
   border-radius: 5px;
   margin-bottom: 10px;
-  background-color: black;
-  width: 100%;
+  width: 80%;
 }
 
 .servicesHPGrid {
@@ -102,7 +111,7 @@
 
 .servicesHPTitle {
   color: white !important;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 20px;
   text-align: center;
   font-family: "Playfair Display";
@@ -130,9 +139,38 @@
   width: 100%;
   margin-top: 40px;
   padding-top: 40px;
+  margin-bottom: 54px;
   position: relative; /* Ensure it stays above the overlay */
   z-index: 2; /* Position the gallery above the overlay */
   box-shadow: none;
+}
+
+.gridContainer{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+
+.galleryCardImg {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.gallery-card-text{
+  background: rgb(180,180,180); /* Solid fallback */
+  background: linear-gradient(0deg, rgba(150,150,150,1) 0%, rgba(50,50,50,1) 100%);
+  text-align: center;
+  padding: 10px;
+  white-space: nowrap;
+  font-weight: 50
+  0;
+}
+
+.scroll-btn {
+  position: relative;
+  z-index: 3;
 }
 
 .reviewsAndLocationContainer {
@@ -162,13 +200,44 @@
   .servicesGrid {
     grid-template-columns: repeat(3, 1fr); /* Ensure 3 columns on desktop */
   }
+  .BookApptButton,
+  .SubParaHeroSection,
+  .ParaHeroSection {
+  margin-top: 400px;
+  position: relative; /* Keeps them above the overlay */
+  z-index: 2; /* Ensures they are above the overlay */
+  }
 }
 
 @media (max-width: 768px) {
+  .HeroSection {
+    background: url("../../../public/images/background.jpg") center / cover
+      no-repeat;
+    width: 100%;
+    height: 80vh; /* Ensure full viewport height */
+    position: relative;
+    z-index: 2;
+  }
+  .scroll-btn {
+    display: none;
+  }
   .homepage {
     justify-content: space-between;
     background-size: 160%;
     background-position: center top;
+  }
+
+  .BookApptButton {
+    margin-top: 200px;
+    position: relative; /* Keeps them above the overlay */
+    z-index: 2; /* Ensures they are above the overlay */
+  }
+
+  .SubParaHeroSection {
+    font-size: .8rem;
+    margin-top: 10px;
+    position: relative; /* Keeps them above the overlay */
+    z-index: 2; /* Ensures they are above the overlay */
   }
 
   .custom-heading {
@@ -183,8 +252,8 @@
     cursor: pointer;
   }
   .ParaHeroSection {
-    font-size: 1rem;
-    margin-top: 95px;
+    font-size: .8rem;
+    margin-top: 25px;
   }
   .servicesHPGrid {
     grid-template-columns: repeat(2, 1fr); /* Switch to a single column */

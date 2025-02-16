@@ -3,7 +3,7 @@ import "./HomePage.css"; // Import the CSS file
 import  ImageSlider from "./ImgSlider/ImageSlider"
 import Review from "./ Reviews/Reviews"
 import {useLoadScript  } from '@react-google-maps/api';
-import React from "react";
+import React, {useRef} from "react";
 import GoogleMapReact from "google-map-react";
 
 const IMAGES = [
@@ -27,13 +27,12 @@ const center = {
   lng: -96.652077, // default longitude
 };
 
-
-
 const AnyReactComponent = ({ text }) => (
   <div style={{ color: "red", fontWeight: "bold" }}>{text}</div>
 );
 
 export default function HomePage() {
+  const scrollContainer = useRef(null);
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries,
@@ -57,8 +56,44 @@ export default function HomePage() {
     zoom: 15,
   };
 
+
+  const handleScroll = (direccion) =>{
+    if(direccion == "left"){
+      scrollContainer.current.scrollBy({left: -300, behavior: "smooth"})
+    }
+    else{
+      scrollContainer.current.scrollBy({left: 300, behavior: "smooth"})
+    }
+  }
+  const services = [
+    {
+      imgSrc: "/images/clien11.jpg",
+      title: "Haircut"
+    },
+    {
+      imgSrc: "/images/client3.jpg",
+      title: "Beard Trim"
+    }
+    // {
+    //   imgSrc: "/images/client2.jpg",
+    //   title: "Head Shave"
+    // },
+    // {
+    //   imgSrc: "/images/client9.jpg",
+    //   title: "Design"
+    // },
+    // {
+    //   imgSrc: "/images/client1.jpg",
+    //   title: "Kids haircut"}
+    // ,
+    // {
+    //   imgSrc: "/images/client1.jpg",
+    //   title: "Beard Shave"
+    // },
+  ]
+
   return (
-    <div className="homepage">
+    <div className="homepage bg-slate-950">
       <Helmet>
         <title>
           Barber in Allen, Texas. | Men haircuts and Beard Grooming in
@@ -79,11 +114,12 @@ export default function HomePage() {
         >
           Book Appointment
         </button>
-        <h1 className="ParaHeroSection">Barbershop in Allen, TX</h1>
+        <h1 className="ParaHeroSection">Barber in Allen, TX</h1>
+        <p className="SubParaHeroSection">Accepting new clients.</p>
       </div>
 
-      <div className="servicesHPContainer bg-white">
-        <h2 className="servicesHPTitle">Barber Services</h2>
+      <div className="servicesHPContainer bg-slate-700">
+        <h2 className="servicesHPTitle">Barbershop Services</h2>
         <div className="servicesHPGrid">
           <div className="serviceHPItem">
           <img src="/images/scissorIcon.png" alt="services bullet" className="serviceIcon"></img>
@@ -114,10 +150,29 @@ export default function HomePage() {
       </div>
 
 
-      <div className="gallery bg-white">
-      <p className="titles">Gallery</p>
-      <ImageSlider images={IMAGES} />
-        {/* <p className="titles">You’re not just getting a haircut, <br></br> you’re getting an experience. Your satisfaction is my top priority.</p> */}
+      <div className="gallery">
+        <div className="galleryTitleContainer">
+          <p className="titles">Gallery</p>
+        </div>
+        
+        <button className="scroll-btn left-btn" onClick={() => handleScroll("left")}>←</button>
+        <div className='gridContainer' ref={scrollContainer}>
+          {services.map((service, index)=>(
+            <div key={index} className='servicesGridCard'>
+              <img
+                src={service.imgSrc}
+                alt={service.title}
+                className='galleryCardImg '
+              />
+              <div className="gallery-card-text">
+                <h2>
+                  {service.title}
+                </h2>
+              </div>
+            </div>
+          ))}
+        </div>
+        <button className="scroll-btn right-btn" onClick={() => handleScroll("right")}>→</button>
       </div>
       <div className="reviewsAndLocationContainer">
         <div className="reviewsContainer">
