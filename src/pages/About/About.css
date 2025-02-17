@@ -1,77 +1,84 @@
 /* AboutPage.css */
 
 body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #1A2130;
-  }
-  
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1A2130;
+  color: white;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Ensures even spacing */
+  min-height: 70vh;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.aboutPageTitle {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 95px;
+  color: #F6F1F1;
+}
+
+.about-text {
+  flex: 1 1 50%;
+  padding: 80px;
+  margin-left: 60px;
+  text-align: left; /* Better readability */
+}
+
+.aboutPara {
+  color: #F6F1F1;
+  line-height: 1.5;
+  text-align: left; /* Left-aligned for readability */
+}
+
+.about-image {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  width: 400px; /* Adjust width as needed */
+  border-radius: 8px;
+}
+
+.bookApptButton {
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    min-height: 70vh; /* Full height of the viewport */
-    padding: 0 20px; /* Added some padding on the sides */
-    box-sizing: border-box; /* Includes padding in height calculation */
-  }
-  
-  
-  .about-text {
-    flex: 1 1 50%; /* Takes up the remaining space */
-    font-weight: 500;
-    font-size: large;
-  }
-  
-  .about-image {
-    flex: 1 1 50%; /* Makes the image container take up 50% width */
-    flex-direction: column;
-    display: flex;
-    text-align: center; /* Centers the image in the container */
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center;
-  }
-  .about-image img {
-    max-width: 100%;
-    height: auto;
-    width: 400px; /* Adjust width as needed */
-    border-radius: 8px;
-  }
-  .bookApptButton{
-    padding: 15px 20px ;
-    border-radius: 10px;
-    background-color: black;
-    color: white ;
-    margin-top: 60px;
-  }
-  
-  @media (max-width: 768px) {
-    .about-container {
       flex-direction: column;
       align-items: center;
-      min-height: auto;
-      padding-top: 50px;
-    }
-  
-    .about-text {
-      padding-right: 0;
-      text-align: justify;
-      font-size: small;
-      padding-bottom: 30px;
-      margin-top: 50px;
-      margin-bottom: 20px;
-    }
-  
-    .about-image img {
-      width: 100%;
-    }
+      text-align: center;
   }
 
-  @media (min-width: 769px) {
-    .about-text {
-      padding-left: 180px; /* Add space between text and image */
-      padding-right: 90px; 
-    }}
-  
+  .about-text, .about-image {
+      max-width: 100%;
+      text-align: justify;
+      padding: 0;
+  }
+
+  .about-image img {
+      width: 100%;
+  }
+}

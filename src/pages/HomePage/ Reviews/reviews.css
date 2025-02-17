@@ -45,6 +45,7 @@
     margin-bottom: 0.75rem;
     font-size: 0.85rem;
     flex-shrink: 0;
+    color: black;
   }
 
   .button-container {
