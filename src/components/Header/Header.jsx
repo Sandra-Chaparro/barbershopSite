@@ -43,7 +43,7 @@ export default function Header() {
             <h1 className="Title text-slate-200">&nbsp; MC the Barber</h1>
           </div>
           {/* Mobile menu button*/}
-          <div className="absolute inset-y-0 left-14 flex items-center sm:hidden">
+          <div className="absolute inset-y-0 left-28 flex items-center sm:hidden">
             <DisclosureButton 
             className="group relative inline-flex rounded-md p-2 text-slate-200 hover:bg-neutral-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="sr-only">Open main menu</span>
