@@ -49,6 +49,7 @@
   background: url("../../../public/images/background.jpg") center / contain
     no-repeat;
   width: 100%;
+  margin-top: -25px;
   height: 80vh; /* Ensure full viewport height */
   position: relative;
   z-index: 2;
@@ -288,6 +289,22 @@
   .servicesHPGrid {
     grid-template-columns: repeat(2, 1fr); /* Switch to a single column */
     gap: 8px; /* Adjust the gap as needed */
+  }
+
+  .gridContainer{
+    margin-left: 22px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .galleryCardImg {
+    width: 90%;
+    object-fit: cover;
+    height: 200px;
+    border-radius: 5px;
   }
   .reviewsAndLocationContainer {
     flex-direction: column; /* Stack vertically */
