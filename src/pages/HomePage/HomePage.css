@@ -228,20 +228,20 @@
   }
 
   .BookApptButton {
-    margin-top: 200px;
+    margin-top: 295px;
     position: relative; /* Keeps them above the overlay */
     z-index: 2; /* Ensures they are above the overlay */
   }
 
   .SubParaHeroSection {
-    font-size: .8rem;
+    font-size: 1rem;
     margin-top: 10px;
     position: relative; /* Keeps them above the overlay */
     z-index: 2; /* Ensures they are above the overlay */
   }
 
   .custom-heading {
-    font-size: 1.8rem; /* Equivalent to text-4xl in Tailwind */
+    font-size: 1.9rem; /* Equivalent to text-4xl in Tailwind */
   }
 
   .BookApptButton {
@@ -252,7 +252,7 @@
     cursor: pointer;
   }
   .ParaHeroSection {
-    font-size: .8rem;
+    font-size: 1.2rem;
     margin-top: 25px;
   }
   .servicesHPGrid {
