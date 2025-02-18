@@ -72,7 +72,7 @@
   color: #0A1931;
   font-weight: 600;
   font-family: "Playfair Display", "Cormorant Unicase", "Roboto", sans-serif;
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: 1000;
   z-index: 1;
   margin-top: 80px;
@@ -82,7 +82,7 @@
   color: #0A1931;
   font-weight: 600;
   font-family: "Playfair Display", "Cormorant Unicase", "Roboto", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   z-index: 2;
   margin-top: 5px;
   margin-bottom: 80px;
@@ -272,7 +272,7 @@
   }
 
   .SubParaHeroSection {
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin-top: 10px;
     position: relative; /* Keeps them above the overlay */
     z-index: 2; /* Ensures they are above the overlay */
@@ -290,7 +290,7 @@
     cursor: pointer;
   }
   .ParaHeroSection {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-top: 25px;
   }
   .servicesHPGrid {
