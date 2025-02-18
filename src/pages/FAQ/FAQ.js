@@ -6,7 +6,7 @@ export default function FAQ() {
       <div className="mx-auto px-5">
         <div className="flex flex-col items-center">
           <h2 className="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">FAQ</h2>
-          <p className="mt-3 text-xl text-[#0A1931] md:text-xl">
+          <p className="mt-3 text-xl text-[#0A1931] md:text-xl font-[700]">
             Frequently asked questions
           </p>
         </div>
@@ -70,7 +70,7 @@ function FAQItem({ question, answer }) {
     <div className="py-5">
       <details className="group">
         <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-          <span className="text-[#0A1931]">{question}</span>
+          <span className="text-[#0A1931] font-[600]">{question}</span>
           <span className="transition group-open:rotate-180">
             <svg
               fill="none"
@@ -87,7 +87,7 @@ function FAQItem({ question, answer }) {
             </svg>
           </span>
         </summary>
-        <p className="group-open:animate-fadeIn mt-3 text-neutral-600">{answer}</p>
+        <p className="group-open:animate-fadeIn mt-3 text-[#0A1931]">{answer}</p>
       </details>
     </div>
   );

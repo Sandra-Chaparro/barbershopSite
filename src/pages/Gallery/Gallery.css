@@ -1,10 +1,24 @@
 /* Container for the gallery */
+.galleryContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+
+.gallery-title {
+    justify-content: center; /* Center the title horizontally */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #213555 ;
+}
+
 .gallery {
     display: grid; /* Use grid instead of flex */
     grid-template-columns: repeat(4, 1fr); /* 4 images per row */
-    gap: 16px; /* Space between images */
+    gap: 36px; /* Space between images */
     justify-items: center; /* Center the images */
-    margin: 105px auto;
+    margin: 45px auto;
 }
 
 /* Each gallery item */
@@ -12,10 +26,13 @@
     width: 300px; /* Set a fixed width */
     height: 400px; /* Set a fixed height */
     overflow: hidden; /* Ensure the image fits within the container */
-    border-radius: 8px; /* Optional: Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
 }
 
+.gallery-item:hover {
+    transform: scale(1.2); /* Enlarge the image on hover */
+  }
 /* Images inside the gallery items */
 .gallery-image {
     width: 100%;
@@ -23,9 +40,15 @@
     object-fit: cover; /* Ensures images fill the container while maintaining aspect ratio */
 }
 
+
 @media (max-width: 768px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+        margin: 5px auto;
+    }
+    .gallery-title {
+        font-size: 1.7rem;
+
     }
 }
 

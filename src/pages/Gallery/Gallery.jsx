@@ -19,13 +19,15 @@ export default function Gallery() {
         // Add more image paths
       ];
   return (
-    
-    <div className="gallery">
-    {images.map((image, index) => (
-      <div key={index} className="gallery-item">
-        <img src={image} alt={`Gallery item ${index + 1}`} className="gallery-image" />
-      </div>
-    ))}
+    <div className="galleryContainer">
+       <h3 className='gallery-title'>Gallery</h3>
+      <div className="gallery">
+      {images.map((image, index) => (
+        <div key={index} className="gallery-item">
+          <img src={image} alt={`Gallery item ${index + 1}`} className="gallery-image" />
+        </div>
+      ))}
+    </div>
   </div>
   )
 }

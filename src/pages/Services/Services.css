@@ -36,7 +36,7 @@
     color: #F6F1F1;
     background-color: #213555;
     padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 7px 15px 10px rgba(0, 0, 0, 0.5);
     
 }
 
@@ -55,7 +55,7 @@ p {
     display: block;
     padding: 15px 20px ;
     border-radius: 10px;
-    background-color: black;
+    background-color: #213555;
     color: white ;
     margin: 60px auto;
     
