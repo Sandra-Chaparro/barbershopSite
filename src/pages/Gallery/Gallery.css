@@ -30,7 +30,7 @@
     transition: transform 0.5s ease-in-out; /* Smooth transition */
 }
 
-.gallery-item:hover {
+.gallery-item:active {
     transform: scale(1.2); /* Enlarge the image on hover */
   }
 /* Images inside the gallery items */

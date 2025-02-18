@@ -34,7 +34,6 @@ export default function Header() {
         //close menu when scrollling
       return (
         <>
-        //close menu when scrollling
       <ScrollCloseMenu open={open} close={close} />
       <div className="headerColor mx-auto">
         <div className="relative flex h-16 sm:justify-center">
