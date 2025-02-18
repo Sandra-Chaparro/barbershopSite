@@ -40,7 +40,7 @@ export default function Header() {
               className="h-10 w-auto ml-2"
             />
             </NavLink>
-            <h1 className="Title text-slate-200">&nbsp; MC the Barber</h1>
+            <h1 className="Title text-[#0A1931]">&nbsp; MC the Barber</h1>
           </div>
           {/* Mobile menu button*/}
           <div className="absolute inset-y-0 left-28 flex items-center sm:hidden">
@@ -68,8 +68,8 @@ export default function Header() {
                   className={({ isActive }) =>
                     classNames(
                       isActive
-                        ? "bg-gray-900 text-gray-700"
-                        : "text-slate-200 hover:bg-neutral-900 hover:text-white",
+                        ? "bg-gray-900 text-white"
+                        : "text-[#0A1931] hover:bg-neutral-900 hover:text-white",
                       "rounded-md px-4 py-2 text-xl font-medium"
                     )
                   }
@@ -101,7 +101,7 @@ export default function Header() {
                     classNames(
                       isActive
                         ? "bg-gray-900 text-white"
-                        : "text-slate-200 hover:bg-neutral-900 hover:text-white",
+                        : "text-[#0A1931] hover:bg-neutral-900 hover:text-white",
                       "rounded-md px-4 py-2 text-xl font-medium"
                     )
                   }
