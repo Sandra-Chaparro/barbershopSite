@@ -1,4 +1,5 @@
 
+import React, { useState, useEffect } from "react";
 import {
   Disclosure,
   DisclosureButton,
@@ -10,8 +11,8 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
-
 import "./Header.css";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -27,9 +28,14 @@ const rightNavigation = [
 ];
 
 export default function Header() {
- 
   return (
     <Disclosure as="nav" className="fixed top-0 left-0 w-full z-50">
+      {({open, close}) => {
+        //close menu when scrollling
+      return (
+        <>
+        //close menu when scrollling
+      <ScrollCloseMenu open={open} close={close} />
       <div className="headerColor mx-auto">
         <div className="relative flex h-16 sm:justify-center">
           <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
@@ -44,17 +50,19 @@ export default function Header() {
           </div>
           {/* Mobile menu button*/}
           <div className="absolute inset-y-0 left-28 flex items-center sm:hidden">
-            <DisclosureButton 
-            className="group relative inline-flex rounded-md p-2 text-slate-200 hover:bg-neutral-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+            <DisclosureButton className="group relative inline-flex rounded-md p-2 text-slate-200 hover:bg-neutral-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon
+              {open ? (
+                  <XMarkIcon
+                  aria-hidden="true"
+                  className="hidden h-6 w-6 group-open:block"
+                />
+              ):(
+                <Bars3Icon
                 aria-hidden="true"
                 className="block h-6 w-6 group-open:hidden"
               />
-              <XMarkIcon
-                aria-hidden="true"
-                className="hidden h-6 w-6 group-open:block"
-              />
+              )}
             </DisclosureButton>
           </div>
           <div className="hidden sm:flex items-center gap-x-6">
@@ -132,6 +140,24 @@ export default function Header() {
           ))}
         </div>
       </DisclosurePanel>
+      </>
+        );
+      }}
     </Disclosure>
   );
+}
+
+function ScrollCloseMenu({ open, close }) {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (open) {
+        close();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [open, close]);
+
+  return null;
 }
